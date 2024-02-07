@@ -1,0 +1,15 @@
+
+
+#canvas {
+    width: 250px;
+    height: 250px;
+    background-color: rgba(150, 150, 121, 0.481)
+}
+
+#canvasRL {
+    display: none;
+}
+
+#canvasOpt {
+    display: none;
+} 
