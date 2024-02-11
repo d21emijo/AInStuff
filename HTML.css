@@ -1,15 +1,11 @@
-
-
-#canvas {
-    width: 250px;
-    height: 250px;
-    background-color: rgba(150, 150, 121, 0.481)
+body{
+    margin: 0px;
+    background-color: bisque;
+    overflow: hidden;
+    text-align: center;
 }
 
-#canvasRL {
-    display: none;
-}
+#myCanvas {
+    background-color: rgba(128, 128, 128, 0.624);
 
-#canvasOpt {
-    display: none;
-} 
+}
