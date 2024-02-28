@@ -4,8 +4,8 @@ body{
     overflow: hidden;
     text-align: center;
 }
-
 #myCanvas {
     background-color: rgba(128, 128, 128, 0.624);
+    display: inline-block;
 
 }
