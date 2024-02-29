@@ -4,7 +4,6 @@ canvas.width=200;
 const ctx = canvas.getContext("2d");
 const mazeSolver = new MazeSolver(20,20,0,0,0); //(x,y,witdh,height,angle)
 // const controls = new controls(0);
-// mazeSolver.draw(ctx);
 
 animate();
 let newAngle;
@@ -19,6 +18,6 @@ function animate(newAngle){
     ctx.clearRect(0,0,canvas.width,canvas.height)
     canvas.height=window.innerHeight*.8; // change to segmentetttttttttts
     mazeSolver.draw(ctx,newAngle);
-
-    // requestAnimationFrame(animate)
+    console.log("animate", newAngle)
+    requestAnimationFrame(animate)
 }
