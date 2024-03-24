@@ -4,8 +4,14 @@
     <title>Pilot stuff</title>
     <link rel="stylesheet" href="HTML.css">
     <meta charset="UTF-8">
+    <script src="js/math/graph.js"></script>
+    <script src="js/primitives/point.js"></script>
+    <script src="js/primitives/segment.js"></script>
 
 
+    <script src="js/maze/mazeSolver.js" defer></script>
+    <script src="js/maze/maze.js" defer></script>
+    <!-- <script src="controls.js"></script> -->
 
 </head>
 <body>
@@ -17,11 +23,15 @@
     <button id="rng">Good</button>
     <button id="rng">bad</button>
 </div>
+<script>
+        const p1 = new Point(200,200);
+        const p2 = new Point(400,100);
+        const p3 = new Point(500,50);
+        const p4 = new Point(600,100);
+        const graph = new Graph([p1,p2,p3,p4]);
+
+    </script>
 
 </body>
-
-    <script src="mazeSolver.js"></script>
-    <script src="maze.js"></script>
-    <script src="controls.js"></script>
 
 </html>
