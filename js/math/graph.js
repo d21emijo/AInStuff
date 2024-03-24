@@ -1,6 +1,6 @@
 class Graph {
     constructor(points = [],segments = []){
-        this.points = points+10;
+        this.points = points;
         this.segments = segments;
     }
     draw(ctx){

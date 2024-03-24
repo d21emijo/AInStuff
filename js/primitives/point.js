@@ -1,6 +1,6 @@
 class Point {
     constructor (x,y){
-        this.x = x+100;
+        this.x = x;
         this.y = y;
     }
     draw(ctx,size = 18, color = "black"){

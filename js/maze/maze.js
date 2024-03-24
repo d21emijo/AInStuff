@@ -3,7 +3,8 @@ canvas.width=1200;
 
 const ctx = canvas.getContext("2d");
 const mazeSolver = new MazeSolver(20,20,0,0,0); //(x,y,witdh,height,angle)
-// const controls = new controls(0);
+
+
 
 animate();
 let newAngle;
@@ -20,6 +21,6 @@ function animate(newAngle){
     mazeSolver.draw(ctx,newAngle);
     console.log("animate", newAngle);
     graph.draw(ctx);
-    console.log(p1);
     // requestAnimationFrame(animate)
 }
+
