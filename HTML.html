@@ -45,25 +45,23 @@ const s3 = new Segment(p2,p4);
 const s4 = new Segment(p1,p4);
 const graph = new Graph([p1,p2,p3,p4],[s1,s2,s3,s4]);    
 function addSegmentToPoint(){
-    // let testseg = graph.points.length;
-    // const index1 = Math.floor(Math.random()*graph.points.length);
-    // const index2 = Math.floor(Math.random()*graph.points.length);
 
     const index1 = graph.points.length-1;
     const index2 = graph.points.length-2;
-
-    graph.addSegment(
-        new Segment(graph.points[index1],graph.points[index2])
-
-    )
-    console.log(index1,index2)
-    console.log(graph.points[index1])
-    animate(newAngle);
-
+    if(graph.segments.length < graph.points.length){
+        graph.addSegment(
+            new Segment(graph.points[index1],graph.points[index2])
+    
+            )
+            console.log(index1,index2)
+            console.log(graph.points[index1])
+            animate(newAngle);
+    }else{
+        console.log("segment already exist!");
+    }
 }
 
 function addRandomPoint(){
-
     graph.addPoint(
         new Point(
             Math.random() * myCanvas.width,
