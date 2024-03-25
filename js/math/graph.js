@@ -3,6 +3,15 @@ class Graph {
         this.points = points;
         this.segments = segments;
     }
+    addPoint(point){
+        this.points.push(point);
+    }
+    // containsPoint(point){
+    //     return this.points.find((p)=> p.equals(point));
+    // }
+    addSegment(seg){
+        this.segments.push(seg);
+    }
     draw(ctx){
         for (const seg of this.segments){
             seg.draw(ctx);
