@@ -1,5 +1,5 @@
 const canvas=document.getElementById("myCanvas");
-canvas.width=1000;
+// canvas.width=1200;
 
 const ctx = canvas.getContext("2d");
 const mazeSolver = new MazeSolver(20,20,0,0,0); //(x,y,witdh,height,angle)

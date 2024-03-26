@@ -23,29 +23,37 @@
 <div>
     <button id="testing" onclick="randomfunc()">random nr</button>
     <button onclick="addRandomPoint()">Good</button>
-    <button onclick="addSegmentToPoint()">bad</button>
+    <button onclick="roadAdd()">bad</button>
 </div>
 
 
 </body>
 
 <script >
-    // myCanvas.width = 1200;
-    // myCanvas.height = 1200;
+myCanvas.width = 1200;
+myCanvas.height = 1200;
+//code testing appratatus
+myCanvas.addEventListener("mousedown", (event) => {
+    var mx,my;
+    let rect = canvas.getBoundingClientRect();
+    mx = event.clientX - rect.left;
+    my = event.clientY - rect.top;
+    console.log("Coordinate x: " + mx,
+                "Coordinate y: " + my);  
+})
 
-const p1 = new Point(200,200);
+const p1 = new Point(myCanvas.width/2,myCanvas.height/2);
 
-const p2 = new Point(400,100);
-const p3 = new Point(500,50);
-const p4 = new Point(600,100);
+// const p2 = new Point(400,100);
+// const p3 = new Point(500,50);
+// const p4 = new Point(600,100);
 
-const s1 = new Segment(p1,p2);
-const s2 = new Segment(p1,p3);
-const s3 = new Segment(p2,p4);
-const s4 = new Segment(p1,p4);
-const graph = new Graph([p1,p2,p3,p4],[s1,s2,s3,s4]);    
+// const s1 = new Segment(p1,p2);
+// const s2 = new Segment(p1,p3);
+// const s3 = new Segment(p2,p4);
+// const s4 = new Segment(p1,p4);
+const graph = new Graph([p1],[]);    
 function addSegmentToPoint(){
-
     const index1 = graph.points.length-1;
     const index2 = graph.points.length-2;
     if(graph.segments.length < graph.points.length){
@@ -64,11 +72,15 @@ function addSegmentToPoint(){
 function addRandomPoint(){
     graph.addPoint(
         new Point(
-            Math.random() * myCanvas.width,
-            Math.random() * myCanvas.height
+            Math.random() * myCanvas.width*0.8+100,
+            Math.random() * myCanvas.height*0.8+100
         )
     );
     animate(newAngle);
+}
+function roadAdd(){
+    addRandomPoint()
+    addSegmentToPoint()
 }
     
 </script>

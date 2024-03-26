@@ -6,9 +6,6 @@ class Graph {
     addPoint(point){
         this.points.push(point);
     }
-    // containsPoint(point){
-    //     return this.points.find((p)=> p.equals(point));
-    // }
     addSegment(seg){
         this.segments.push(seg);
     }
